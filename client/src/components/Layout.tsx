@@ -94,7 +94,11 @@ export function Layout({ children }: LayoutProps) {
           <div className="flex items-center gap-3">
             <CreatePostButton />
             <div className="h-8 w-8 rounded-lg bg-secondary overflow-hidden border border-border cursor-pointer hover:border-primary transition-colors">
-              <img src="/images/avatar-user.jpg" alt="ユーザー" className="h-full w-full object-cover" />
+              <img
+                src={import.meta.env.BASE_URL + "/images/avatar-user.jpg" }
+                alt="ユーザー" 
+                className="h-full w-full object-cover" 
+              />
             </div>
           </div>
         </div>
