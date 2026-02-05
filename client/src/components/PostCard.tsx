@@ -77,6 +77,7 @@ const VideoModal = () => (
     deletePost(post.id);
     toast.success("投稿を削除しました");
   };
+  console.log("投稿URL:", post.mediaUrl)
 
   if (isLoading) {
     return (
@@ -125,20 +126,31 @@ const VideoModal = () => (
       <div className="relative aspect-video w-full overflow-hidden bg-secondary">
         {post.mediaType === "video" ? (
           <div className="relative h-full w-full flex items-center justify-center group/media cursor-pointer">
-             <img src={post.mediaUrl} alt={post.title} className="h-full w-full object-cover opacity-70" />
-             <div className="absolute inset-0 flex items-center justify-center">
-                <div className="h-14 w-14 rounded-full bg-primary/90 flex items-center justify-center shadow-md group-hover/media:scale-110 transition-transform duration-300">
-                  <Play className="h-5 w-5 text-primary-foreground fill-current ml-0.5" />
-                </div>
-             </div>
-          </div>
-        ) : (
-          <img 
-            src={post.mediaUrl} 
-            alt={post.title} 
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" 
-          />
-        )}
+            {/* ↓ ここが本体：video タグ */}
+            <video
+              className="w-full h-full object-cover"
+              src={post.mediaUrl}
+              controls
+              playsInline
+              preload="metadata"
+            />
+
+      {/* 再生ボタンオーバーレイ */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div className="h-14 w-14 rounded-full bg-primary/90 flex items-center justify-center shadow-md">
+          <Play className="h-5 w-5 text-primary-foreground fill-current ml-0.5" />
+        </div>
+      </div>
+
+    </div>
+) : (
+  <img
+    src={post.mediaUrl}
+    alt={post.title}
+    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+  />
+)}
+
         
         {/* タイトルオーバーレイ */}
         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
