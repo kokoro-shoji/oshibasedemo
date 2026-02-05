@@ -120,7 +120,7 @@ export function CreatePostModal() {
           mediaType: media.type,
           author: {
             name: "demo_user",
-            avatar: "/images/avatar-user.jpg",
+            avatar: import.meta.env.BASE_URL +"/images/avatar-user.jpg",
           },
           likes: 0,
           comments: 0,
