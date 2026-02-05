@@ -8,4 +8,11 @@ if (p) {
 }
 
 
-createRoot(document.getElementById("root")!).render(<App />);
+import { Router } from "wouter";
+
+createRoot(document.getElementById("root")!).render(
+  <Router base={import.meta.env.BASE_URL}>
+    <App />
+  </Router>
+);
+
