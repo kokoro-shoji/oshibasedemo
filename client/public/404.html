@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script>
+    const repo = '/oshibasedemo';
+    const path = location.pathname.replace(repo, '');
+    location.replace(repo + '/?p=' + encodeURIComponent(path));
+  </script>
+</head>
+<body></body>
+</html>
