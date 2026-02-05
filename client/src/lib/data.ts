@@ -100,7 +100,7 @@ export const DUMMY_POSTS: Post[] = [
     mediaType: "image",
     author: {
       name: "スピードスター",
-      avatar: import.meta.env.BASE_URL + "client/public/images/24506_color.png",
+      avatar: import.meta.env.BASE_URL + "/images/24506_color.png",
     },
     likes: 1100,
     comments: 56,
