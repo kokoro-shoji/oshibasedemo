@@ -35,7 +35,7 @@ export const DUMMY_POSTS: Post[] = [
     mediaType: "image",
     author: {
       name: "バスキング",
-      avatar: import.meta.env.BASE_URL + "images/avatar-user.jpg",
+      avatar: import.meta.env.BASE_URL + "/images/bomb.png",
     },
 
     likes: 892,
@@ -52,7 +52,7 @@ export const DUMMY_POSTS: Post[] = [
     mediaType: "image",
     author: {
       name: "シューター太郎",
-      avatar: import.meta.env.BASE_URL + "/images/avatar-user.jpg",
+      avatar: import.meta.env.BASE_URL + "/images/bibus.png",
     },
     likes: 1560,
     comments: 78,
@@ -68,7 +68,7 @@ export const DUMMY_POSTS: Post[] = [
     mediaType: "image",
     author: {
       name: "ディフェンダー花子",
-      avatar: import.meta.env.BASE_URL + "/images/avatar-user.jpg",
+      avatar: import.meta.env.BASE_URL + "/images/ribon.png",
     },
     likes: 720,
     comments: 42,
@@ -84,7 +84,7 @@ export const DUMMY_POSTS: Post[] = [
     mediaType: "image",
     author: {
       name: "コーチマイク",
-      avatar: import.meta.env.BASE_URL + "/images/avatar-user.jpg",
+      avatar: import.meta.env.BASE_URL + "/images/nuko.png",
     },
     likes: 450,
     comments: 24,
@@ -100,7 +100,7 @@ export const DUMMY_POSTS: Post[] = [
     mediaType: "image",
     author: {
       name: "スピードスター",
-      avatar: import.meta.env.BASE_URL + "/images/avatar-user.jpg",
+      avatar: import.meta.env.BASE_URL + "client/public/images/24506_color.png",
     },
     likes: 1100,
     comments: 56,
